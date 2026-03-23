@@ -1,13 +1,8 @@
 import React from 'react';
-import { Cpu, Globe, Users } from 'lucide-react';
+import { Globe, Users } from 'lucide-react';
 
 const Features: React.FC = () => {
   const features = [
-    {
-      icon: <Cpu className="w-8 h-8 text-primary-500" />,
-      title: 'AI-Powered',
-      description: 'Get instant help from our smart coding assistant.',
-    },
     {
       icon: <Globe className="w-8 h-8 text-primary-500" />,
       title: 'Modern Stack',

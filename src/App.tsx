@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
 import AuthCard from './components/AuthCard';
-import Chatbot from './components/Chatbot';
 import { CoursesView, MyLearningView, ProfileView } from './components/Views';
 import CourseDetail from './components/CourseDetail';
 import CoursePlayer from './components/CoursePlayer';
@@ -77,7 +76,7 @@ function App() {
       <main>
         {currentView === 'Home' && (
           <div className="animate-in fade-in duration-500">
-            <Hero setCurrentView={setCurrentView} />
+            <Hero setCurrentView={setCurrentView} user={user} />
             <Features />
           </div>
         )}
@@ -130,11 +129,6 @@ function App() {
           </div>
         )}
       </main>
-
-      {/* Global Chatbot */}
-      {!isFullScreenView && (
-         <Chatbot />
-      )}
 
     </div>
   );
