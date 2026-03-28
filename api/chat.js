@@ -6,8 +6,7 @@ export default async function handler(req, res) {
   }
 
   // Strictly use standard server-side GEMINI_API_KEY.
-  const rawKey = process.env.GEMINI_API_KEY || "";
-  const apiKey = rawKey.replace(/^["'`]+|["'`]+$/g, '').trim();
+  const apiKey = process.env.GEMINI_API_KEY;
 
   if (!apiKey) {
     return res.status(500).json({ error: '🚨 API Key is missing in Vercel Environment Variables. Please add GEMINI_API_KEY.' });
